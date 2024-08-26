@@ -23,8 +23,9 @@ app.get('/api-scraper', async (req, res) => {
         const data = await scrapeData(url, slug, drawNo);
         res.json({ success: true, data });
     } catch (error) {
-        res.status(500).json({ success: false, error: 'Failed to scrape data' });
+        res.status(500).json({ success: false, error: error });
     }
+    console.log("hi");
 });
 
 module.exports = app;

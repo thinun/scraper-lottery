@@ -3,6 +3,8 @@ const puppeteer = require('puppeteer');
 const scrapeData = async (url, slug, drawNo) => {
     const finalUrl = `${url}/${slug}/${drawNo}`;
 
+    console.log(finalUrl)
+
 
 
     const browser = await puppeteer.launch();
